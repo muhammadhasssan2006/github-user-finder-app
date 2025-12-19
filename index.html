@@ -19,13 +19,18 @@
     .butn:hover {
       color: black;
       background-color: gray;
-  
-      }
-        .container{
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px gray;
-        z-index: 1;
-        padding: 10px;
+    }
+    .container {
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px gray;
+      z-index: 1;
+      /* padding: 10px; */
+      
+      font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    .image {
+      border-radius: 50%;
     }
   </style>
   <body
@@ -42,27 +47,18 @@
         type="search"
         placeholder="Enter Github Username"
         aria-label="Search"
+        id="UserInput"
       />
       <button
         class="btn btn-outline-light border-2 text-light butn"
         type="submit"
+         onclick="fetchData()"
       >
         Search
       </button>
     </div>
 
-    <div class="container w-50 mt-5">
-        <div class="row ">
-            <div class="col-3 border-end border-1 border-secondary ">
-
-               <img class="w-100" width="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfeTVzexhtJPfc32q6MxUJgbBEb_wQOjM51cSM-AjnlQ&s" alt="">
-            </div>
-            <div class="col-9">
-
-                column
-            </div>
-
-        </div>
+    <div  id="contentDiv">
 
     </div>
     <script src="app.js"></script>
